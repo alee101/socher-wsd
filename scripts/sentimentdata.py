@@ -51,7 +51,7 @@ for score in avg_scores:
 data_terms = [] # All terms found in the training tree
 # Write all terms found in both the treebank and training tree to 'present' and 
 # all remaining terms to 'missing'
-with open('present', 'w') as f_out1, open('missing', 'w') as f_out2:
+with open('../data/present', 'w') as f_out1, open('../data/missing', 'w') as f_out2:
     for term in single_terms:
         # print term[1], scores[int(term[0])], sentiments.get(term[1], 'None')
         word = term[1]
@@ -64,7 +64,7 @@ with open('present', 'w') as f_out1, open('missing', 'w') as f_out2:
             f_out2.write(' '.join(map(str, [word, sentiment_scores, '\n'])))
 
 # Write all words with high variance sentiments to use for word-sense disambiguation
-with open('datafile', 'w') as f_out:
+with open('../data/datafile', 'w') as f_out:
     for term in data_terms:
         word = term[1]
         sentiment_scores = map(int, scores[int(term[0])])
