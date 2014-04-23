@@ -1,0 +1,4 @@
+Evelyn: look at nltk -> wn to see what methods are available for WSD
+Kiran:  look at pywsd and make it work, comment code in research paper format
+Albert: look at pywsd and make it work, sort by variance the list of ambiguous words
+All: look for newer research papers that do WSD, also look into the papers from the pywsd github README. 
